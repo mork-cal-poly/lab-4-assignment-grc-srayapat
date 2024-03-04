@@ -37,6 +37,9 @@ function draw() {
   drawRocket(-175, rocketY);
   drawPlanet(-100, -900);
   pop();
+
+  //HIDDEN SNORLAX
+  drawSnorlax(350,100,0,.3)
 }
 
 function drawBackground() {
@@ -58,11 +61,4 @@ function drawRocket(x, y) {
   scale(0.25);
   image(rocket, 0, 0);
   pop();
-}
-
-function mouseClicked() {
-  if (!RocketMoving && mouseX >= -100 && mouseX <= 375 && mouseY >= 320 && mouseY <= 400) {
-    // Check if the click is within the rocket's area
-    RocketMoving = true;
-  }
 }
